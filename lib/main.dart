@@ -4,7 +4,6 @@ import 'package:get_storage/get_storage.dart';
 import 'package:tourism/data/apis/base_api.dart';
 import 'package:tourism/routes/routes.dart';
 import 'core/core.dart';
-import 'views/home/home_view.dart';
 
 void main() async {
   await GetStorage.init();
