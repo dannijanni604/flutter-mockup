@@ -8,27 +8,16 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Form(
-          key: controller.formKey,
-          child: Column(
-            children: [
-              TextFormField(
-                controller: controller.emailController,
-              ),
-              TextFormField(
-                controller: controller.passwordController,
-              ),
-              ElevatedButton(
-                onPressed: controller.onLogin,
-                child: Text('Login'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+        appBar: AppBar(),
+        body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Form(
+                key: controller.formKey,
+                child: Column(children: [
+                  TextFormField(controller: controller.emailController),
+                  TextFormField(controller: controller.passwordController),
+                  ElevatedButton(
+                      onPressed: controller.onLogin, child: const Text('Login'))
+                ]))));
   }
 }
