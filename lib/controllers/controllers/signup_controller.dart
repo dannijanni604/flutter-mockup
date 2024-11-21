@@ -9,6 +9,7 @@ class SignupController extends GetxController {
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final nameController = TextEditingController();
 
   Future onLogin() async {
     if (formKey.currentState!.validate()) {
@@ -16,6 +17,7 @@ class SignupController extends GetxController {
       var res = await api.post("/login", {
         'email': emailController.text.trim(),
         'password': passwordController.text.trim(),
+        'name': nameController.text.trim(),
       });
       if (res.isOk) {
         await GetStorage().write('auth_token', res.body['token']);
