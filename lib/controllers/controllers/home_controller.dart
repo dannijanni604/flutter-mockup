@@ -3,15 +3,13 @@ import 'package:pusher_client/pusher_client.dart';
 import 'package:tourism/core/core.dart';
 import 'package:tourism/data/apis/auth_api.dart';
 
-class FeedController extends GetxController with StateMixin {
+class HomeController extends GetxController with StateMixin {
   RxList posts = RxList([]);
   late Channel channel;
 
   PusherClient pusher = PusherClient(
     '24d44c1bc2052b60000b',
-    PusherOptions(
-      cluster: 'ap2',
-    ),
+    PusherOptions(cluster: 'ap2'),
   );
   @override
   void onReady() {

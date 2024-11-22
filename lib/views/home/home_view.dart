@@ -4,7 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:tourism/controllers/controllers.dart';
 import 'package:tourism/views/auth/login_view.dart';
 
-class HomeView extends GetView<FeedController> {
+class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
   @override
