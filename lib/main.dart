@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Tourism',
+      title: 'Flutter Mockup',
       theme: AppTheme.instance.lightTheme,
       darkTheme: AppTheme.instance.darkTheme,
       initialRoute: Routes.splash,
